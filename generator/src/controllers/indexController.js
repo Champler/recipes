@@ -9,9 +9,9 @@ module.exports = {
                 {association: 'user'}]
             })
         .then((recipes)=>{
-            res.send(recipes)
             res.render('index',{
-                recipes
+                recipes,
+                session: req.session ? req.session : ""
             })
         })
         .catch(err => console.log(err))
