@@ -1,8 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+@import url(/stylesheets/home.css);
+
+
+* {
+  margin: 0;
+  padding: 0px;
+   font-family: 'Raleway', sans-serif;;
 }
 
 a {
-  color: #00B7FF;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
 }
+
