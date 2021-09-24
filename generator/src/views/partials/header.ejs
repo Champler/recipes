@@ -1,5 +1,12 @@
 <header>
     <img class="logo" src="/img/recetary.png" alt="">
     <h1>WELCOME</h1>
-    <button><a href="#">MIS RECETAS</a></button>
+   <div>
+    <% if (session.user) { %>
+        <button><a href="#">MIS RECETAS</a></button>
+        <button><a href="/users/logout">SALIR</a></button>
+    <% }else{ %> 
+    <button><a href="/users/login">LOGIN</a></button>
+    <%} %> 
+   </div>
 </header>
