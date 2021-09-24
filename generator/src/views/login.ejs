@@ -5,7 +5,8 @@
     <%- include('./partials/header') %> 
     <main>
     <div class="container w-75 bg-primary rounded shadow">
-        <div class="row align-items-strech">
+        <div class="espacio  mb-5"></div>
+        <div class="row align-items-strech p-2">
             <div class="col bg d-none d-lg-block">
                 <img src="/img/login.jpg" alt="">
             </div>
@@ -25,19 +26,20 @@
                       </div>
                     <div class="mb-4 form-check">
                         <input type="checkbox" name="remember" class="form-check-input">
-                        <label for="remember" class=form-check-label>Mantener iniciado</label>
+                        <label for="remember" class="form-check-label fw-bold">Mantener iniciado</label>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                        <button type="submit" class="btn btn-primary fw-bold">Iniciar sesion</button>
                     </div>
-                    <div class="my-3">
+                    <div class="my-3 fw-bold">
                         <span>No tienes cuenta? <a href="/users/register">Registrate</a></span>                        
                     </div>
                 </form>
                 
             </div>
-        </div>
+        </div>    
     </div>
+    <div class="espacio mt-5"></div>
 </main>
 </body>
 </html>
