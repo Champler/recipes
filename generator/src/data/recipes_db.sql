@@ -29,7 +29,7 @@ CREATE TABLE `images` (
   PRIMARY KEY (`id`),
   KEY `images_FK` (`user_recipes_id`),
   CONSTRAINT `images_FK` FOREIGN KEY (`user_recipes_id`) REFERENCES `userrecipes` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES (1,'default-image.png',1),(2,'default-image.png',1),(3,'default-image.png',1),(4,'default-image.png',2),(5,'default-image.png',2),(6,'default-image.png',2),(7,'default-image.png',3),(8,'default-image.png',3),(9,'default-image.png',3),(10,'default-image.png',4),(11,'default-image.png',4),(12,'default-image.png',4),(13,'default-image.png',5),(14,'default-image.png',5),(15,'default-image.png',5),(16,'default-image.png',6),(17,'default-image.png',6),(18,'default-image.png',6);
+INSERT INTO `images` VALUES (1,'default-image.png',1),(2,'default-image.png',1),(3,'default-image.png',1),(4,'default-image.png',2),(5,'default-image.png',2),(6,'default-image.png',2),(7,'default-image.png',3),(8,'default-image.png',3),(9,'default-image.png',3),(10,'default-image.png',4),(11,'default-image.png',4),(12,'default-image.png',4),(13,'default-image.png',5),(14,'default-image.png',5),(15,'default-image.png',5),(16,'default-image.png',6),(17,'default-image.png',6),(18,'default-image.png',6),(19,'default-image.png',7),(20,'default-image.png',7),(21,'default-image.png',7),(22,'default-image.png',8),(23,'default-image.png',8),(24,'default-image.png',8),(25,'default-image.png',9),(26,'default-image.png',9),(27,'default-image.png',9),(28,'default-image.png',10),(29,'default-image.png',10),(30,'default-image.png',10),(31,'default-image.png',11),(32,'default-image.png',11),(33,'default-image.png',11),(34,'default-image.png',12),(35,'default-image.png',12),(36,'default-image.png',12),(37,'default-image.png',13),(38,'default-image.png',13),(39,'default-image.png',13),(40,'default-image.png',14),(41,'default-image.png',14),(42,'default-image.png',14),(43,'default-image.png',15),(44,'default-image.png',15),(45,'default-image.png',15),(46,'default-image.png',16),(47,'default-image.png',16),(48,'default-image.png',16),(49,'default-image.png',17),(50,'default-image.png',17),(51,'default-image.png',17),(52,'default-image.png',18),(53,'default-image.png',18),(54,'default-image.png',18);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-24 16:57:08
+-- Dump completed on 2021-09-24 18:28:30

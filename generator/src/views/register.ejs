@@ -3,34 +3,30 @@
     <%- include('./partials/head') %> 
 <body>
     <%- include('./partials/header') %> 
-    <div class="container w-75 bg-primary mt-5 rounded shadow">
+    <div class="container  bg-primary mt-5 rounded shadow">
         <div class="row align-items-strech">
-            <div class="col bg d-none d-lg-block">
-                <img src="/img/login.jpg" alt="">
+            <div class="col mt-3 bg d-none d-lg-block">
+                <img src="/img/register.jpeg" alt="">
             </div>
             <div class="col bg-white p-5 rounded-end ">
                 <div class="text-end">
                     <img src="/img/recetary.png" width ="100" alt="">
                 </div>
-                <h2 class="fw-bold text-center  mb-5">Bienvenido</h2>
-                <form action="/users/login" method="POST">
+                <h2 class="fw-bold text-center  mb-5">Registrate</h2>
+                <form action="/users/register" method="POST">
                     <div class="mb-4 form-floating">
                         <input type="text" class="form-control" id="floatingInput" name="user" placeholder="name@example.com">
                         <label for="floatingInput" name="user">Usuario</label>
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword"  name="pass" placeholder="Password">
+                        <input type="password" class="form-control" id="floatingPassword"name="pass" placeholder="Password">
                         <label for="floatingPassword" name="pass">Password</label>
                       </div>
-                    <div class="mb-4 form-check">
-                        <input type="checkbox" name="remember" class="form-check-input">
-                        <label for="remember" class=form-check-label>Mantener iniciado</label>
-                    </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                        <button type="submit" class="btn btn-primary">Registrate</button>
                     </div>
                     <div class="my-3">
-                        <span>No tienes cuenta? <a href="/users/register">Registrate</a></span>                        
+                        <span>Ya tenes cuenta paparulo? <a href="/users/login">Logeate careta</a></span>                        
                     </div>
                 </form>
                 
