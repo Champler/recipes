@@ -23,7 +23,7 @@ module.exports = {
     login: (req, res) => {
         //vista
         res.render('login',{
-            title: 'Logueate'
+            title: 'Logueate campion'
         })
     },
     loginProcess: (req, res) => {
