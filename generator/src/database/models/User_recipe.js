@@ -11,7 +11,7 @@ module.exports = (sequelize,dataTypes) => {
             type:dataTypes.STRING(50),
             allowNull:false
         },
-        decription:{
+        description:{
             type:dataTypes.STRING(100),
             allowNull:false
         },
@@ -21,7 +21,7 @@ module.exports = (sequelize,dataTypes) => {
         }
     }
     let config={
-        tablename:"user_recipes",
+        tablename:"userRecipes",
         timestamps:false
     }
 
