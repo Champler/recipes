@@ -7,6 +7,7 @@ module.exports = {
         //vista
         res.render('register',{
             title:'registrate careta'
+            
         })
     },
     registerProcess: (req, res) => {

@@ -11,6 +11,7 @@ module.exports = {
         .then((recipes)=>{
             
             res.render('index',{
+                title: 'Bienvenidos',
                 recipes,
                 session: req.session ? req.session : ""
             })
@@ -31,7 +32,9 @@ module.exports = {
         })
     },
     newRecipe: (req, res) => {
-        res.render('vistedeagregar')
+        res.render('vistedeagregar',{
+            title:'Agrega tus recetas'
+        })
     },
     addRecipe: (req, res) => {
         let arrayImages = [];
