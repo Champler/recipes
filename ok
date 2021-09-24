@@ -1,0 +1,56 @@
+[33mcommit 0d12db01f7619b00ad11a2478df3ec4b1d72c7e7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 06a6420 14b6b16
+Author: SorakaTop <alcocergonzalomatias@gmail.com>
+Date:   Fri Sep 24 15:56:54 2021 -0300
+
+    Merge branch 'master' of https://github.com/Champler/recipes
+
+[33mcommit 06a6420cfc33bf25d47c365ee20e7c48c64a30cb[m
+Author: SorakaTop <alcocergonzalomatias@gmail.com>
+Date:   Fri Sep 24 15:56:07 2021 -0300
+
+    holis
+
+[33mcommit 14b6b16175909f3487da73f2b66fd9986215b5e0[m
+Merge: c3f9c9b 1228af2
+Author: aime <aimeagustinagarces@gmail.com>
+Date:   Fri Sep 24 15:49:00 2021 -0300
+
+    Merge branch 'master' of https://github.com/Champler/recipes
+
+[33mcommit c3f9c9b9e3059c3fb408a9fc245c1c882b9235db[m
+Author: aime <aimeagustinagarces@gmail.com>
+Date:   Fri Sep 24 15:48:54 2021 -0300
+
+    header en proceso
+
+[33mcommit 1228af2043710e66b8fe5ea1071c243379d3cce4[m
+Merge: b54aa2b f06352d
+Author: KevinAlmada <kevinalmada81@gmail.com>
+Date:   Fri Sep 24 15:43:23 2021 -0300
+
+    Merge branch 'master' of https://github.com/Champler/recipes
+
+[33mcommit b54aa2b93f1f16ef9769fa54db77050ca7d04722[m
+Author: KevinAlmada <kevinalmada81@gmail.com>
+Date:   Fri Sep 24 15:43:11 2021 -0300
+
+    peron vive
+
+[33mcommit f06352d04faa8a6cc6d3d7d13c023d310a34c63b[m
+Author: Tobias Racedo <tobaracedo@gmail.com>
+Date:   Fri Sep 24 15:25:06 2021 -0300
+
+    Controladores
+
+[33mcommit fa753eb426fc6e6e71231dfbe355eb9475c3c305[m
+Author: Tobias Racedo <tobaracedo@gmail.com>
+Date:   Fri Sep 24 15:11:54 2021 -0300
+
+    a
+
+[33mcommit b2021fc2bbbe5e895f116e1d2f2f4c25cd64f2f2[m
+Author: Tobias Racedo <tobaracedo@gmail.com>
+Date:   Fri Sep 24 15:04:06 2021 -0300
+
+    first commit
