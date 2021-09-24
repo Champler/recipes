@@ -9,6 +9,7 @@ module.exports = {
                 {association: 'user'}]
             })
         .then((recipes)=>{
+            /* res.send(recipes)  */
             res.render('index',{
                 recipes,
                 session: req.session ? req.session : ""
