@@ -9,7 +9,7 @@ module.exports = {
                 {association: 'user'}]
             })
         .then((recipes)=>{
-            res.send(recipes)
+            
             res.render('index',{
                 recipes
             })
@@ -17,13 +17,49 @@ module.exports = {
         .catch(err => console.log(err))
     },
     detail: (req, res) => {
-
+        db.UserRecipes.findByPk(req.params.id,{
+            include:[{association : 'images'},
+                {association: 'ingredients'},
+                {association: 'user'}]
+        })
+        .then(recipe=>{
+            res.send(recipe)
+            res.render('lavista',{
+                recipe
+            })
+        })
     },
     newRecipe: (req, res) => {
-        //vista
+        res.render('vistedeagregar')
     },
     addRecipe: (req, res) => {
-        //crud
+        let arrayImages = [];
+        if(req.files){
+            req.files.forEach(image=>{
+                arrayImages.push(image.filename)
+            })
+        }
+        let {
+            name,
+            description
+        }= req.body
+
+        db.UserRecipes.create({
+            name,
+            description,  
+        })
+        .then(recipe =>{
+            if(arrayImages.length > 0){
+                let images = arrayImages.map(image =>{
+                    return {
+                        image:image,
+                        user_recipes_id :req.session.user.id
+                    }
+                })
+                .then(()=> res.redirect('/'))
+                .catch(err =>console.log(err))
+            }
+        })
     },
     editRecipe: (req, res) => {
         //vista
