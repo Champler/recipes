@@ -3,5 +3,6 @@
 }
 
 .container{
-   background: #FFF8E5
+   background: #FFF8E5;
+   background: linear-gradient(to right, #FFB344 ,#E05D5D);
 }
