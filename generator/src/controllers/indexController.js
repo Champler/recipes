@@ -9,9 +9,14 @@ module.exports = {
                 {association: 'user'}]
             })
         .then((recipes)=>{
+<<<<<<< HEAD
            
+=======
+            /* res.send(recipes)  */
+>>>>>>> 6087feeedee551b3da2012df2438c552e69ee3df
             res.render('index',{
-                recipes
+                recipes,
+                session: req.session ? req.session : ""
             })
         })
         .catch(err => console.log(err))
