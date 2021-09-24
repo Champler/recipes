@@ -60,9 +60,10 @@ module.exports = {
                         user_recipes_id :req.session.user.id
                     }
                 })
-                .then(()=> res.redirect('/'))
-                .catch(err =>console.log(err))
-            }
+                    db.images.bulkCreate(images)
+                    .then(()=> res.redirect('/'))
+                    .catch(err =>console.log(err))
+             }
         })
     },
     editRecipe: (req, res) => {
