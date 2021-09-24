@@ -1,6 +1,7 @@
 
 @import url(/stylesheets/home.css);
 @import url(/stylesheets/login.css);
+@import url(/stylesheets/add.css);
 
 
 * {
@@ -17,6 +18,12 @@ a {
   text-decoration: none;
 }
 main{
+  height: 100vh;
   background-color: #FFF8E5;
 }
-
+input{
+  outline: none;
+}
+textarea{
+  outline: none;
+}
