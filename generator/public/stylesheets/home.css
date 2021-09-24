@@ -15,18 +15,25 @@ header h1{
 font-family: 'Raleway', sans-serif;
 color: #C6D57E;
 }
+
 header button{
     border-radius: 55px;
     padding: 10px;
     background-color: transparent;
-    border: solid #E05D5D 2px ;
+    border: solid #E05D5D 1px ;
     
 }
 header button a{
+    text-decoration: none;
     color: #E05D5D;
     font-weight: bolder;
 
 }
+header button a img{
+    width: 25px;
+    height: 25px;
+}
+
 main.index{
     text-align: center;
     align-items: center;
@@ -46,7 +53,9 @@ padding-top: 25px;
   font-size: 75px;
 }
 hr{
-    width: 90%;
+
+    align-items: center;
+    width: 100%;
     background-color: red;
 }
 section.recipe-cards{
