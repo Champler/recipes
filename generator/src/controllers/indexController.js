@@ -32,7 +32,7 @@ module.exports = {
         })
     },
     newRecipe: (req, res) => {
-        res.render('vistedeagregar',{
+        res.render('addRecipe',{
             title:'Agrega tus recetas'
         })
     },
