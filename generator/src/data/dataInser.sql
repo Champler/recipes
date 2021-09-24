@@ -144,7 +144,7 @@ insert into ingredients (name,user_recipes_id) values
 insert into ingredients (name,user_recipes_id) values
 ("ingrediente 1 receta 1 user 4",10);
 insert into ingredients (name,user_recipes_id) values
-("ingrediente 2 receta 1 user 4",10;
+("ingrediente 2 receta 1 user 4",10);
 insert into ingredients (name,user_recipes_id) values
 ("ingrediente 3 receta 1 user 4",10);
 insert into ingredients (name,user_recipes_id) values
