@@ -1,26 +1,45 @@
+
+
 header{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(255, 225, 175);
+    background-color: #FFF8E5;
     align-items: center;
+    border-bottom: solid #E05D5D 1px;
 }
 header img{
 width: 125px;
 height: 125px;
 }
 header h1{
-    font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 color: #C6D57E;
 }
 header button{
     border-radius: 55px;
     padding: 10px;
     background-color: transparent;
-    border: solid #C6D57E 1px ;
+    border: solid #E05D5D 2px ;
     
 }
 header button a{
-    color: #C6D57E;
+    color: #E05D5D;
     font-weight: bolder;
 
+}
+main.index{
+    text-align: center;
+    align-items: center;
+    background-color: #FFF8E5 ;
+}
+main .carousel{
+padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 75px;
+}
+hr{
+    width: 90%;
+    background-color: red;
 }
