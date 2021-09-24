@@ -84,6 +84,79 @@ insert into images (name,user_recipes_id) values
 insert into images (name,user_recipes_id) values
 ("default-image.png",6);
 /*  */
+insert into images (name,user_recipes_id) values
+("default-image.png",7);
+insert into images (name,user_recipes_id) values
+("default-image.png",7);
+insert into images (name,user_recipes_id) values
+("default-image.png",7);
+insert into images (name,user_recipes_id) values
+("default-image.png",8);
+insert into images (name,user_recipes_id) values
+("default-image.png",8);
+insert into images (name,user_recipes_id) values
+("default-image.png",8);
+insert into images (name,user_recipes_id) values
+("default-image.png",9);
+insert into images (name,user_recipes_id) values
+("default-image.png",9);
+insert into images (name,user_recipes_id) values
+("default-image.png",9);
+insert into images (name,user_recipes_id) values
+("default-image.png",10);
+insert into images (name,user_recipes_id) values
+("default-image.png",10);
+insert into images (name,user_recipes_id) values
+("default-image.png",10);
+insert into images (name,user_recipes_id) values
+("default-image.png",11);
+insert into images (name,user_recipes_id) values
+("default-image.png",11);
+insert into images (name,user_recipes_id) values
+("default-image.png",11);
+insert into images (name,user_recipes_id) values
+("default-image.png",12);
+insert into images (name,user_recipes_id) values
+("default-image.png",12);
+insert into images (name,user_recipes_id) values
+("default-image.png",12);
+insert into images (name,user_recipes_id) values
+("default-image.png",13);
+insert into images (name,user_recipes_id) values
+("default-image.png",13);
+insert into images (name,user_recipes_id) values
+("default-image.png",13);
+insert into images (name,user_recipes_id) values
+("default-image.png",14);
+insert into images (name,user_recipes_id) values
+("default-image.png",14);
+insert into images (name,user_recipes_id) values
+("default-image.png",14);
+insert into images (name,user_recipes_id) values
+("default-image.png",15);
+insert into images (name,user_recipes_id) values
+("default-image.png",15);
+insert into images (name,user_recipes_id) values
+("default-image.png",15);
+insert into images (name,user_recipes_id) values
+("default-image.png",16);
+insert into images (name,user_recipes_id) values
+("default-image.png",16);
+insert into images (name,user_recipes_id) values
+("default-image.png",16);
+insert into images (name,user_recipes_id) values
+("default-image.png",17);
+insert into images (name,user_recipes_id) values
+("default-image.png",17);
+insert into images (name,user_recipes_id) values
+("default-image.png",17);
+insert into images (name,user_recipes_id) values
+("default-image.png",18);
+insert into images (name,user_recipes_id) values
+("default-image.png",18);
+insert into images (name,user_recipes_id) values
+("default-image.png",18);
+/*  */
 insert into ingredients (name,user_recipes_id) values
 ("ingrediente 1 receta 1 user 1",1);
 insert into ingredients (name,user_recipes_id) values
