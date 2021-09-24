@@ -31,7 +31,9 @@
         <section class="recipe-cards">
             <% recipes.forEach(recipe => { %>
                 <article class="recipe">
-                    <img src="/img/<%- recipe.images.name %>" alt="asas">
+                     <img src="/img/<%- recipe.images[0].name  %> " alt="">
+                  
+                    
                     <h4><%- recipe.name %></h4>
                     <% if (session.user && session.user.id == recipes.user_id){ %>
                         <a href="/editRecipe/<%- recipe.id %>">EDITAR</a>
