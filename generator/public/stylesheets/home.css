@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 225, 175);
+    align-items: center;
+}
+header img{
+width: 125px;
+height: 125px;
+}
+header h1{
+    font-family: 'Raleway', sans-serif;
+color: #C6D57E;
+}
+header button{
+    border-radius: 55px;
+    padding: 10px;
+    background-color: transparent;
+    border: solid #C6D57E 1px ;
+    
+}
+header button a{
+    color: #C6D57E;
+    font-weight: bolder;
+
+}
