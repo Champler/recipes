@@ -3,7 +3,19 @@ const db = require('../database/models')
 
 module.exports = {
     index: (req, res) => {
-
+        db.UserRecipes.findAll({           
+        include:[{association : 'images'},
+                {association: 'ingredients'},
+                {association: 'user'}]
+            })
+        .then((recipes)=>{
+            /* res.send(recipes)  */
+            res.render('index',{
+                recipes,
+                session: req.session ? req.session : ""
+            })
+        })
+        .catch(err => console.log(err))
     },
     detail: (req, res) => {
 
