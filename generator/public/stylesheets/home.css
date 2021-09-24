@@ -13,7 +13,8 @@ height: 125px;
 }
 header h1{
 font-family: 'Raleway', sans-serif;
-color: #C6D57E;
+color: #00A19D;
+
 }
 
 header button{
@@ -44,6 +45,14 @@ main.index .otrasRecetas h2{
     font-weight: lighter;
     font-size: 55px;
     
+}
+main.index .agregarP{
+    background-color: #00A19D;
+    color: #FFF8E5;
+    width: auto;
+}
+main.index .agregarP a{
+    color: #FFF8E5;
 }
 main .carousel{
 padding-top: 25px;
