@@ -33,14 +33,16 @@ module.exports = {
             }
         })
         .then (user =>{
-            req.session.user ={
-                id:user.id,
-                name: user.name
-            };
-            if(req.body.remember){
-                res.cookie('RecipesCookie',req.session.user,{maxAge: 5000*60})
+            if(bcrypt.compareSync(req.body.pass, user.password)){
+                req.session.user ={
+                    id:user.id,
+                    name: user.name
+                };
+                if(req.body.remember){
+                    res.cookie('RecipesCookie',req.session.user,{maxAge: 5000*60})
+                }
+                res.redirect('/')
             }
-            res.redirect('/')
         })
     },
     userLogout:(req,res)=> {
