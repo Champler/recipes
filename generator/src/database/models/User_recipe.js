@@ -36,6 +36,10 @@ module.exports = (sequelize,dataTypes) => {
             as:"images",
             foreignKey:"user_recipes_id"
         })
+        UserRecipes.hasMany(models.Ingredients,{
+            as:"ingredients",
+            foreignKey:"user_recipes_id"
+        })
     }
 
     return UserRecipes
