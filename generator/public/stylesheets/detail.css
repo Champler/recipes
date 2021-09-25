@@ -1,0 +1,126 @@
+/* CARRUSEL */
+
+  @keyframes display {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .recipeCarrousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+  }
+  
+  .recipeCarrousel img {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    animation: display 10s infinite;
+    width: 100%;
+    height: 200px;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+
+  /* Titulo general */
+  .recipeTitle{
+      position: absolute;
+      -webkit-text-stroke: 1px #f5f5f5;
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      text-shadow: 4px 4px 8px #f5f5f5;
+  }
+
+  .midTitle {
+    -webkit-text-stroke: 3px #FFB344;
+      font-weight: bolder;
+      font-size: 2rem;
+      margin: 2rem 2rem;
+      letter-spacing: 4px;
+  }
+
+  .recipeIngredients {
+    color: #00A19D;
+    font-weight: bold;
+
+  }
+
+  .preparation {
+    color: #00A19D;
+    font-weight: bold;
+  }
+
+  .preparationContainer, .ingredientsContainer {
+      width: 80%;
+      margin: 2rem auto;
+  }
+
+  .ingredientsContainer{
+    text-align: justify;
+    line-height: 2rem;
+
+  }
+  .preparationContainer {
+    text-align: justify;
+    line-height: 2rem;
+  
+  }
+  ul {
+    list-style:none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .preparation{
+      margin: 2rem;
+  }
+
+
+
+  /* media queries */
+  @media (min-width: 518px){
+
+  .recipeCarrousel img {
+    height: 600px;
+  }
+
+  .recipeCarrousel {
+    height: 600px;
+  }
+
+  .recipeTitle{
+    position: absolute;
+    -webkit-text-stroke: 0.4rem #f5f5f5;
+    font-size: 4rem;
+    letter-spacing: 0.6rem;
+    text-shadow: 4px 4px 8px #f5f5f5;
+    top: 45%;
+}
+}
