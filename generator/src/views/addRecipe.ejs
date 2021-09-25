@@ -9,7 +9,7 @@
             <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_snmohqxj/lottie_step2/data.json"  background="transparent"  speed="1"  style="height: 200px; width:500px;"  loop  autoplay></lottie-player>
             <h1>EDITAR RECETA</h1>
             <div class="create-forms">
-                <form class="create" action="/addRecipe" method="POST" ><!-- borramos enctype porque no esta hecho multer , y nos daba problemas en el req.body -->
+                <form class="create" action="/addRecipe" method="POST" enctype="multipart/form-data"><!-- borramos enctype porque no esta hecho multer , y nos daba problemas en el req.body -->
                     <div class="name">
                         <label for="floatingInput" name="name">NOMBRE DE RECETA</label>
                         <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Cheesecake">

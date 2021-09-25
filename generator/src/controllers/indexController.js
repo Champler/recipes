@@ -1,6 +1,5 @@
 const fs = require('fs')
 const db = require('../database/models')
-
 module.exports = {
     index: (req, res) => {
         db.UserRecipes.findAll({           
@@ -48,27 +47,26 @@ module.exports = {
             ingredients,
             user_id:req.session.user.id
         })
-        .then(recipe =>{
-            
+        .then(recipe =>{            
             if(arrayImages.length > 0){
                 let images = arrayImages.map(image =>{
-                    return {
+                    return{
                         image:image,
                         user_recipes_id :recipe.id
                     }
                 })
-                    db.images.bulkCreate(images)
-                    .then(()=> res.redirect('/'))
-                    .catch(err =>console.log(err))
-             }else{
-                db.images.create({
+                db.Images.bulkCreate(images)
+                .then(()=> res.redirect('/'))
+                .catch(err =>console.log(err))
+            }else{
+                db.Images.create({
                     name:"default.image.png",
-                    user_recipes_id :recipe.id
+                    user_recipes_id: recipe.id
                 })
                 .then(()=> res.redirect('/'))
                 .catch(err =>console.log(err))
              }
-        })
+        }).catch(err =>console.log(err))
     },
         
     addRecipe: (req, res) => {
