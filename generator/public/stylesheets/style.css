@@ -21,6 +21,7 @@ main{
   height: 100vh;
   background-image: url("/img/Desktop\ -\ 4.svg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 input{
   outline: none;
