@@ -67,6 +67,10 @@ module.exports = {
         })
     },
     editRecipe: (req, res) => {
+        res.render('detail',{
+            title:'Holi'
+            
+        })
         //vista
     },
     updateRecipe: (req, res) => {
