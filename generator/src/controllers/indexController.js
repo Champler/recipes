@@ -51,7 +51,7 @@ module.exports = {
             if(arrayImages.length > 0){
                 let images = arrayImages.map(image =>{
                     return{
-                        image:image,
+                        name: image,
                         user_recipes_id :recipe.id
                     }
                 })
@@ -60,7 +60,7 @@ module.exports = {
                 .catch(err =>console.log(err))
             }else{
                 db.Images.create({
-                    name:"default.image.png",
+                    name:"default-image.png",
                     user_recipes_id: recipe.id
                 })
                 .then(()=> res.redirect('/'))
