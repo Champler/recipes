@@ -18,6 +18,9 @@ module.exports = (sequelize,dataTypes) => {
         user_id:{
             type:dataTypes.INTEGER,
             allowNull:false
+        },
+        Ingredients:{
+            type:dataTypes.TEXT
         }
     }
     let config={
@@ -34,10 +37,6 @@ module.exports = (sequelize,dataTypes) => {
         })
         UserRecipes.hasMany(models.Images,{
             as:"images",
-            foreignKey:"user_recipes_id"
-        })
-        UserRecipes.hasMany(models.Ingredients,{
-            as:"ingredients",
             foreignKey:"user_recipes_id"
         })
     }
