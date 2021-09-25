@@ -99,6 +99,13 @@ module.exports = {
         .then(()=> res.redirect('/'))
     },
     deleteRecipe: (req, res) => {
-
+        db.UserRecipes.destroy({
+            where: {
+                id: +req.params.id
+            }
+        }).then(() => {
+            res.redirect('/')
+        })
+        .catch(error => console.log(error))
     }
 }
