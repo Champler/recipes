@@ -40,6 +40,11 @@ main.index{
     align-items: center;
     background-color: #FFF8E5 ;
 }
+main.index .recipe-cards .controls{
+    display: flex;
+    justify-content: space-around;
+    border: 1px #FFB344 solid;
+}
 main.index .otrasRecetas h2{
     margin-top: 55px;
     font-weight: lighter;
@@ -65,7 +70,7 @@ hr{
 
     align-items: center;
     width: 100%;
-    background-color: red;
+    background-color: #FFB344;
 }
 section.recipe-cards{
     justify-content: space-around;
@@ -74,7 +79,11 @@ section.recipe-cards{
     flex-wrap: wrap;
 }
 section.recipe-cards .recipe{
-    border: 1px red solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: #FFF8E5 ;
+    background-color:#00A19D ;
+    padding: 10px;
+    border: 2px #FFB344 solid;
     margin-bottom: 10px;
     
 }
