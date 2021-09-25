@@ -5,7 +5,6 @@ module.exports = {
     index: (req, res) => {
         db.UserRecipes.findAll({           
         include:[{association: 'images'},
-                {association: 'ingredients'},
                 {association: 'user'}]
             })
         .then((recipes)=>{
@@ -21,7 +20,6 @@ module.exports = {
     detail: (req, res) => {
         db.UserRecipes.findByPk(req.params.id,{
             include:[{association : 'images'},
-                {association: 'ingredients'},
                 {association: 'user'}]
         })
         .then(recipe=>{
@@ -40,14 +38,18 @@ module.exports = {
         }
         let {
             name,
-            description
+            description,
+            ingredients
         }= req.body
 
         db.UserRecipes.create({
             name,
-            description,  
+            description,
+            ingredients,
+            user_id:req.session.user.id
         })
         .then(recipe =>{
+            
             if(arrayImages.length > 0){
                 let images = arrayImages.map(image =>{
                     return {
@@ -58,6 +60,13 @@ module.exports = {
                     db.images.bulkCreate(images)
                     .then(()=> res.redirect('/'))
                     .catch(err =>console.log(err))
+             }else{
+                db.images.create({
+                    name:"default.image.png",
+                    user_recipes_id :recipe.id
+                })
+                .then(()=> res.redirect('/'))
+                .catch(err =>console.log(err))
              }
         })
     },
