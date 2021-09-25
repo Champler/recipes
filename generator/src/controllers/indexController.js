@@ -5,7 +5,6 @@ module.exports = {
     index: (req, res) => {
         db.UserRecipes.findAll({           
         include:[{association: 'images'},
-                {association: 'ingredients'},
                 {association: 'user'}]
             })
         .then((recipes)=>{
@@ -21,7 +20,6 @@ module.exports = {
     detail: (req, res) => {
         db.UserRecipes.findByPk(req.params.id,{
             include:[{association : 'images'},
-                {association: 'ingredients'},
                 {association: 'user'}]
         })
         .then(recipe=>{

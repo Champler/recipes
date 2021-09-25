@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/detail.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title> <%= title %>  </title>
+    </head>
 
 <body>
-    <%- include('./partials/header') %>
+    <header>
+        <a href="/"><img class="logo" src="/img/recetary.png" alt=""></a>
+        <h1>WELCOME</h1>
+       <div>
+        <% if (session.user) { %>
+            <button><a href="#">MIS RECETAS</a></button>
+            <button class="logout"><a href="/users/logout"><img src="img/logout.png" alt=""></a></button>
+        <% }else{ %> 
+        <button><a href="/users/login">LOGIN</a></button>
+        <%} %> 
+       </div>
+    </header>
     <main class="detail">
 
         <!-- CARROUSEL -->
         <div class="recipeCarrousel">
             <!-- Esto debería ir dinámico, pero como no sé hacer los controllers lo hago estático -->
-            <a href=""></a><img src="/img/fideitos1.jpg" alt="">
+            <img src="/img/fideitos1.jpg" alt="">
             <img src="/img/fideitos2.jpg" alt="">
             <img src="/img/fideitos3.jpg" alt="">
             <img src="/img/fideitos4.jpg" alt="">
