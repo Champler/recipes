@@ -38,7 +38,10 @@
                    <div class="controls">
                        <% if (session.user && session.user.id == recipe.user_id) { %>
                         <a href="/editRecipe/<%- recipe.id %>"><img src="/img/edit.png" width="30px" alt=""></a>
-                        <a href="/delete/<%- recipe.id %>"><img src="/img/delete.png" width="30px"alt=""></a>                  
+
+                        <form action="/delete/<%- recipe.id %>?_method=DELETE" method="POST">
+                            <button type="submit"><img src="/img/delete.png" width="30px"alt=""></button>             
+                        </form>
                        <% } %>
                     </div>
                 </article>
