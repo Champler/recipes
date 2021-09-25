@@ -19,7 +19,7 @@ module.exports = (sequelize,dataTypes) => {
             type:dataTypes.INTEGER,
             allowNull:false
         },
-        Ingredients:{
+        ingredients:{
             type:dataTypes.TEXT
         }
     }
