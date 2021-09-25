@@ -32,11 +32,6 @@ module.exports = {
         })
     },
     newRecipe: (req, res) => {
-        res.render('vistedeagregar',{
-            title:'Agrega tus recetas'
-        })
-    },
-    addRecipe: (req, res) => {
         let arrayImages = [];
         if(req.files){
             req.files.forEach(image=>{
@@ -57,13 +52,19 @@ module.exports = {
                 let images = arrayImages.map(image =>{
                     return {
                         image:image,
-                        user_recipes_id :req.session.user.id
+                        user_recipes_id :recipe.id
                     }
                 })
                     db.images.bulkCreate(images)
                     .then(()=> res.redirect('/'))
                     .catch(err =>console.log(err))
              }
+        })
+    },
+        
+    addRecipe: (req, res) => {
+        res.render('addRecipe',{
+            title:'Agrega tus recetas'
         })
     },
     editRecipe: (req, res) => {

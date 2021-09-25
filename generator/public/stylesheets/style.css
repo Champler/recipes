@@ -2,6 +2,7 @@
 @import url(/stylesheets/home.css);
 @import url(/stylesheets/login.css);
 @import url(/stylesheets/detail.css);
+@import url(/stylesheets/add.css);
 
 
 * {
@@ -18,6 +19,12 @@ a {
   text-decoration: none;
 }
 main{
-  background-color: #FFF8E5;
+  height: 100vh;
+  background-image: url("/img/Desktop\ -\ 4.svg");
 }
-
+input{
+  outline: none;
+}
+textarea{
+  outline: none;
+}

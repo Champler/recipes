@@ -4,6 +4,17 @@
     <body>
         <%- include('./partials/header') %> 
     <main class="index">
+        
+            <div class="agregarP">
+                <h2>¿Deseas agregar una receta?</h2>
+                <% if (session.user) { %>
+                    <a href="/addRecipe">click Aqui</a>
+                <% }else{ %>
+                <a href="/users/login">click Aqui</a>
+                <% } %>
+            </div>
+        
+       
         <!-- CAROUSEL -->
         <div class="carousel">
             <lottie-player src="https://assets1.lottiefiles.com/temp/lf20_nXwOJj.json"  background="transparent"  speed="1"  style="width: 500px; height: 300px;"  loop  autoplay></lottie-player>
@@ -20,10 +31,10 @@
                   
                     
                     <h4><%- recipe.name %></h4>
-                    <% if (session.user && session.user.id == recipes.user_id){ %>
-                        <a href="/editRecipe/<%- recipe.id %>">EDITAR</a>
-                        <a href="/delete/<%- recipe.id %>">Agregar</a>
-                    <% } %>
+                   <div class="controls">
+                        <a href="/editRecipe/<%- recipe.id %>"><img src="/img/edit.png" width="30px" alt=""></a>
+                        <a href="/delete/<%- recipe.id %>"><img src="/img/delete.png" width="30px"alt=""></a>
+                    </div>
                 </article>
             <% }) %>
         </section>
