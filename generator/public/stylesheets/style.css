@@ -20,6 +20,7 @@ a {
 main{
   height: 100vh;
   background-image: url("/img/Desktop\ -\ 4.svg");
+  background-size: cover;
 }
 input{
   outline: none;
