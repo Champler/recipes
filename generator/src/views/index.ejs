@@ -28,16 +28,18 @@
             <% recipes.forEach(recipe => { %>
                 <article class="recipe">
                     <% if (recipe.images.length == 0) { %>
-                        <img src="/img/default-image.png" alt="">
+                        <a href="/detail/<%- recipe.id %> "><img src="/img/default-image.png" alt=""></a>
                     <% }else{ %>
-                        <img src="/img/<%- recipe.images[0].name  %> " alt="">
+                        <a href="/detail/<%- recipe.id %> "><img src="/img/<%- recipe.images[0].name  %> " alt=""></a>
                     <% } %>
                   
                     
                     <h4><%- recipe.name %></h4>
                    <div class="controls">
+                       <% if (session.user && session.user.id == recipe.user_id) { %>
                         <a href="/editRecipe/<%- recipe.id %>"><img src="/img/edit.png" width="30px" alt=""></a>
-                        <a href="/delete/<%- recipe.id %>"><img src="/img/delete.png" width="30px"alt=""></a>
+                        <a href="/delete/<%- recipe.id %>"><img src="/img/delete.png" width="30px"alt=""></a>                  
+                       <% } %>
                     </div>
                 </article>
             <% }) %>

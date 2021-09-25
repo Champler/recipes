@@ -37,32 +37,21 @@
             <img src="/img/fideitos4.jpg" alt="">
             <img src="/img/fideitos5.jpg" alt="">
 
-            <h1 class="recipeTitle">Acá debería ir el título</h1>
+            <h1 class="recipeTitle"><%= recipe.name %> </h1>
         </div>
 
  <div class="content">   
 <section class="ingredientsContainer">
 <h3 class="midTitle">Ingredientes: </h3>
 <ul class="recipeIngredients">
-    <li>Ingrediente 1</li>
-    <li>Ingrediente 1</li>
-    <li>Ingrediente 1</li>
-    <li>Ingrediente 1</li>
-    <li>Ingrediente 1</li>
+    <li><p><%= recipe.ingredients %></p></li>
+    
 </ul>
 </section>
 
 <section class="preparationContainer">
     <h3 class="midTitle">Preparación:</h3>
-<p class="preparation"> Bueno y acá vendría a estar el paso a paso de la preparación con todo el blablabla y el pipipi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia aliquet nisi, vel cursus nibh rhoncus at. Phasellus pulvinar convallis maximus. Donec id lacus non justo venenatis convallis et eget elit. Vestibulum in felis orci. Vestibulum condimentum velit a quam laoreet, at suscipit tortor ullamcorper. Nullam dictum nunc in pretium luctus. Suspendisse ac tortor libero. Sed non mauris arcu. Proin ut lorem venenatis, tristique ipsum vel, ornare eros. Donec ut mi a sapien accumsan malesuada non in lectus. Praesent at accumsan urna. Aliquam quis laoreet eros. Sed ut ullamcorper enim.
-
-    In rutrum massa nec interdum faucibus. Ut gravida cursus dolor, ornare eleifend odio ultricies facilisis. Cras posuere ipsum nulla, non maximus velit iaculis et. Aenean id ante ac odio vulputate accumsan. Integer interdum orci at pellentesque consequat. Nunc eu est purus. Curabitur volutpat ultricies turpis ut sagittis. Vestibulum ultrices ornare velit, a eleifend ligula consectetur et. Praesent ac ex at risus laoreet aliquam vitae eu quam. Donec auctor dolor hendrerit risus interdum, vel suscipit nulla semper. Nunc lectus nunc, ultricies vel ipsum ut, ultrices egestas risus. Aliquam sit amet erat sagittis, faucibus urna luctus, scelerisque purus. Proin vitae felis sed turpis ultricies tincidunt at vel nibh. Nunc tincidunt, arcu et porttitor porttitor, enim magna elementum erat, eu maximus odio orci sed turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-    
-    Donec non elit in risus scelerisque commodo sed sit amet nunc. Mauris iaculis euismod lacus, sit amet molestie libero dignissim nec. Aliquam velit dolor, aliquam nec mauris non, sodales vestibulum dui. Nullam ac interdum libero. Fusce viverra semper tincidunt. Ut tortor elit, commodo at gravida vel, mattis in lectus. Aliquam erat volutpat. Maecenas tempus tincidunt ante in blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur eleifend efficitur sem eget maximus. In non venenatis lorem. Vivamus suscipit ut diam id pellentesque. Curabitur neque diam, lacinia sit amet tincidunt et, condimentum ac urna. Fusce eget dui ac ligula faucibus ultricies. Donec libero metus, eleifend sed mollis consequat, lobortis non justo.
-    
-    Nam pharetra lacus nec mi mollis feugiat. Fusce faucibus pulvinar metus ut rhoncus. Proin nec tempor odio. Maecenas id maximus elit. In iaculis egestas nisi. Vestibulum sit amet libero nisl. Nulla quis eleifend lacus. Maecenas rhoncus risus ipsum.
-    
-    Cras tempor arcu eleifend, suscipit mi et, posuere quam. Maecenas finibus neque sit amet mauris vulputate molestie. Nullam ut ex vitae nunc pharetra mattis sed sed turpis. Duis consequat ligula scelerisque vulputate semper. Mauris nisi libero, sodales ut vestibulum aliquam, pulvinar maximus elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed molestie elementum nunc ut rutrum. Suspendisse scelerisque molestie elit, et sodales tellus. Duis ut vehicula mi. Cras tincidunt neque scelerisque risus accumsan efficitur. Vestibulum rhoncus fringilla vulputate. Sed bibendum auctor dolor, in finibus nunc commodo ac. Sed sed semper erat, ac dictum massa.</p>
+<p class="preparation"> <%= recipe.description %></p>
 </section>    
 </div>   
 </main>

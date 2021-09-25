@@ -7,28 +7,28 @@
     <main>
         <div class="containerAdd">
             <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_snmohqxj/lottie_step2/data.json"  background="transparent"  speed="1"  style="height: 200px; width:500px;"  loop  autoplay></lottie-player>
-            <h1>EDITAR RECETA</h1>
+            <h1>AGREGAR RECETA</h1>
             <div class="create-forms">
-                <form class="create" action="/addRecipe" method="POST" enctype="multipart/form-data"><!-- borramos enctype porque no esta hecho multer , y nos daba problemas en el req.body -->
+                <form class="create" action="/editRecipe/<%= recipe.id %> ?_method=PUT" method="POST" ><!-- borramos enctype porque no esta hecho multer , y nos daba problemas en el req.body -->
                     <div class="name">
                         <label for="floatingInput" name="name">NOMBRE DE RECETA</label>
-                        <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Cheesecake">
+                        <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Cheesecake" value="<%= recipe.name %>">
                     </div>
                     <div class="large">
                        <label for="description">¿COMO LO COCINO?</label>
-                       <textarea name="description" id="description" cols="30" rows="5"></textarea>
+                       <textarea name="description" id="description" cols="30" rows="5"><%= recipe.description %></textarea>
                           </div>
                  <div class="large">
                         <label for="ingredients">INGREDIENTES</label>
                        
-                        <textarea name="ingredients" id="descripcion" cols="30" rows="5"></textarea>
+                        <textarea name="ingredients" id="descripcion" cols="30" rows="5"><%= recipe.ingredients %></textarea>
                        
                         </div>
                 <div class="name">
                         <label for="inputFile">Cargar Imagen:</label>
                          <input type="file" name="image" id="inputFile">
                 </div>
-                             <button type="submit">CREAR</button>  
+                             <button type="submit">EDITAR</button>  
                 </form>                           
             </div>
             
