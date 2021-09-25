@@ -19,7 +19,7 @@ a {
 }
 main{
   height: 100vh;
-  background-color: #FFF8E5;
+  background-image: url("/img/Desktop\ -\ 4.svg");
 }
 input{
   outline: none;
