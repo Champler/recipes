@@ -23,8 +23,8 @@ module.exports = {
                 {association: 'user'}]
         })
         .then(recipe=>{
-            res.send(recipe)
-            res.render('lavista',{
+            res.render('detail',{
+                title:recipe.name,
                 recipe
             })
         })
@@ -77,14 +77,28 @@ module.exports = {
         })
     },
     editRecipe: (req, res) => {
-        res.render('detail',{
-            title:'Holi'
-            
-        })
-        //vista
+        db.UserRecipes.findByPk(req.params.id)
+            .then(recipe => {
+                res.render("editRecipe",{
+                    title:"Edicion de receta",
+                    recipe
+                })
+            })
     },
     updateRecipe: (req, res) => {
-        //crud
+        let {
+            name,
+            description,
+            ingredients
+        }= req.body
+        db.UserRecipes.update({
+            name,
+            description,
+            ingredients
+        },{
+            where:{id:req.params.id}
+        })
+        .then(()=> res.redirect('/'))
     },
     deleteRecipe: (req, res) => {
 
