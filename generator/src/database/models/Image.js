@@ -1,32 +1,34 @@
 module.exports = (sequelize,dataTypes) => {
-    let alias = "Images"
+    let alias = 'Images'
+
     let cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER(11).UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false 
+            allowNull: false
         },
-        name:{
-            type:dataTypes.STRING(50),
-            allowNull:false
+        name: {
+            type: dataTypes.STRING(50),
+            allowNull: false
         },
         user_recipes_id:{
-            type:dataTypes.INTEGER,
-            allowNull:false
+            type: dataTypes.INTEGER,
+            allowNull: false
         }
     }
-    let config={
-        tablename:"images",
-        timestamps:false
+
+    let config = {
+        tableName: 'images',
+        timestamps: false
     }
 
-    const Image = sequelize.define(alias,cols,config)
+    const Image = sequelize.define(alias, cols, config)
 
     Image.associate = models => {
         Image.belongsTo(models.UserRecipes,{
-            as:"userRecipes",
-            foreignKey:"user_recipes_id"
+            as: 'userRecipes',
+            foreignKey: 'user_recipes_id'
         })
     }
 
