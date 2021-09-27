@@ -2,9 +2,12 @@ var express = require('express');
 var router = express.Router();
 let controller = require('../controllers/indexController')
 let upload = require('../middlewares/uploadFiles');
+let cookieCheck = require('../middlewares/cookieCheck')
 /* GET home page. */
-router.get('/', controller.index)
+router.get('/',cookieCheck, controller.index)
 router.get('/detail/:id', controller.detail)
+
+router.get('/myRecipes',controller.myRecipes)
 
 router.get('/addRecipe', controller.addRecipe)
 router.post('/addRecipe',upload.array('image'),controller.newRecipe)

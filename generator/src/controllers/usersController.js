@@ -49,7 +49,7 @@ module.exports = {
     userLogout:(req,res)=> {
         req.session.destroy();
         
-        if(req.cookies.cookieTech){
+        if(req.cookies.RecipesCookie){
             res.cookie('RecipesCookie','', {maxAge: -1})
         }
         res.redirect('/')

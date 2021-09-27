@@ -3,7 +3,7 @@
     <h1>WELCOME</h1>
    <div>
     <% if (session.user) { %>
-        <button><a href="#">MIS RECETAS</a></button>
+        <button><a href="/myRecipes">MIS RECETAS</a></button>
         <button class="logout"><a href="/users/logout"><img src="img/logout.png" alt=""></a></button>
     <% }else{ %> 
     <button><a href="/users/login">LOGIN</a></button>

@@ -107,5 +107,20 @@ module.exports = {
             res.redirect('/')
         })
         .catch(error => console.log(error))
+    },
+    myRecipes: (req,res) => {
+        db.UserRecipes.findAll({
+            where:{
+                user_id:req.session.user.id
+            },
+            include:[{association: 'images'},
+            {association: 'user'}]
+        }).then(recipes => {
+            res.render('index',{
+                title: `recetas de ${req.session.user.name}`,
+                recipes,
+                session: req.session ? req.session : ""
+            })
+        })
     }
 }
