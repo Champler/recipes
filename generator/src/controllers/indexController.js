@@ -25,7 +25,44 @@ module.exports = {
         })
     },
     newRecipe: (req, res) => {
-        
+        let arrayImages = [];
+        if(req.files){
+            req.files.forEach(image=>{
+                arrayImages.push(image.filename)
+            })
+        }
+        let {
+            name,
+            description,
+            ingredients
+        }= req.body
+
+        db.UserRecipes.create({
+            name,
+            description,
+            ingredients,
+            user_id:req.session.user.id
+        })
+        .then(recipe =>{            
+            if(arrayImages.length > 0){
+                let images = arrayImages.map(image =>{
+                    return{
+                        name: image,
+                        user_recipes_id :recipe.id
+                    }
+                })
+                db.Images.bulkCreate(images)
+                .then(()=> res.redirect('/'))
+                .catch(err =>console.log(err))
+            }else{
+                db.Images.create({
+                    name:"default-image.png",
+                    user_recipes_id: recipe.id
+                })
+                .then(()=> res.redirect('/'))
+                .catch(err =>console.log(err))
+             }
+        }).catch(err =>console.log(err)) 
     },
         
     addRecipe: (req, res) => {
@@ -43,7 +80,19 @@ module.exports = {
             })
     },
     updateRecipe: (req, res) => {
-       
+        let {
+            name,
+            description,
+            ingredients
+        }= req.body
+        db.UserRecipes.update({
+            name,
+            description,
+            ingredients
+        },{
+            where:{id:req.params.id}
+        })
+        .then(()=> res.redirect('/'))
     },
     deleteRecipe: (req, res) => {
         db.UserRecipes.destroy({
