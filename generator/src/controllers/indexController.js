@@ -46,9 +46,6 @@ module.exports = {
        
     },
     deleteRecipe: (req, res) => {
-<<<<<<< HEAD
-       
-=======
         db.UserRecipes.destroy({
             where: {
                 id: +req.params.id
@@ -72,6 +69,5 @@ module.exports = {
                 session: req.session ? req.session : ""
             })
         })
->>>>>>> a117fbc332f952037abd1dc519367c5dc9e74f27
     }
 }
