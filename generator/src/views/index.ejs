@@ -29,9 +29,9 @@
             <% recipes.forEach(recipe => { %>
                 <article class="recipe">
                     <% if (recipe.images.length == 0) { %>
-                        <a href="/detail/<%- recipe.id %> "><img src="/img/default-image.png" alt=""></a>
+                        <a href="/detail/<%- recipe.id %>"><img src="/img/recipes_imgs/default-image.png" alt=""></a>
                     <% }else{ %>
-                        <a href="/detail/<%- recipe.id %> "><img src="/img/<%- recipe.images[0].name  %> " alt=""></a>
+                        <a href="/detail/<%- recipe.id %>"><img src="/img/recipes_imgs/<%- recipe.images[0].name  %>" alt="" width="250px" height="250px"></a>
                     <% } %>
                   
                     
