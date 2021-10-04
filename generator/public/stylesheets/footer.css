@@ -1,4 +1,33 @@
 footer{
-    background-color: #FFB344;
+    background-color: #FFF8E5;
+    position:fixed;
+   height: 70px;
+    bottom:0px;
+    width:100%;
+    border-top: 2px solid #00A19D;
+    padding-bottom:15px;
     
+}
+
+
+footer ul.linkedin{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+}
+footer ul.linkedin li{
+   
+    color: #00A19D;
+    font-weight: bolder;
+}
+footer ul.linkedin li a{
+    text-decoration: none;
+    color: #00A19D;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

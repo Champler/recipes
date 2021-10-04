@@ -23,6 +23,7 @@ main{
   background-image: url("/img/Desktop\ -\ 4.svg");
   background-size: cover;
   background-repeat: no-repeat;
+margin-bottom: 355px;
 }
 input{
   outline: none;

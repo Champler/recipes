@@ -78,9 +78,11 @@ section.recipe-cards{
     margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 85px;
 }
 section.recipe-cards .recipe{
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px 3px#FFB344 ;
     color: #FFF8E5 ;
     background-color:#00A19D ;
     padding: 10px;
@@ -94,3 +96,34 @@ section.recipe-cards .recipe img{
 section.recipe-cards .recipe h4{
     font-size: 35px;
 }
+.recetasMes {
+  
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+height: 155px;
+background-image: url(/img/fondito.jpg) ;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+width: 70%;
+border-radius: 55px;
+display: flex;
+justify-content: center;
+}
+.recetasMes h2{
+    font-weight: 999;
+    align-items: center;
+    text-align: center;
+    margin-top: 0 auto;
+    color: white;
+}
+
+.cardMes {
+    margin-top: 255px;
+    
+}
+.cardMes .grid2 img{
+    margin-bottom: 155px;
+} 
