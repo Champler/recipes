@@ -48,9 +48,18 @@ module.exports = {
        })
     },
     userLogout:(req,res)=> {
+<<<<<<< HEAD
        req.session.destroy()
        if(req.cookies.RecipesCookie){
            res.cookie('RecipesCookie',"",{maxAge:-1})
        }
+=======
+        req.session.destroy();
+        
+        if(req.cookies.RecipesCookie){
+            res.cookie('RecipesCookie','', {maxAge: -1})
+        }
+        res.redirect('/')
+>>>>>>> a117fbc332f952037abd1dc519367c5dc9e74f27
     }
 }
