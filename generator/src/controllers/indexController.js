@@ -80,6 +80,11 @@ module.exports = {
             })
     },
     updateRecipe: (req, res) => {
+        let recipesImages = []
+        if (req.files) {
+            req.files.forEach(img =>{recipesImages.push(img.filename)})
+        }
+        
         let {
             name,
             description,
@@ -90,9 +95,30 @@ module.exports = {
             description,
             ingredients
         },{
-            where:{id:req.params.id}
+            where:{id:req.params.id},
+            include:[{association:"images"}]
         })
-        .then(()=> res.redirect('/'))
+        .then( ()=> {
+            
+            if (req.files) {
+                db.Images.destroy({          // destruyo todas las imagenes
+                    where: {
+                        user_recipes_id: req.params.id, // que coincide con el product_id que recibe por url
+                    }
+                })
+                    .then(() => {
+                        let imagenes = recipesImages.map(image =>{
+                            return {name:image,user_recipes_id:req.params.id}
+                        })
+                        db.Images.bulkCreate(imagenes)
+                        .then(() => {
+                            res.redirect('/myRecipes')
+                        })
+                    })
+            }
+
+            res.redirect('/myRecipes') 
+        })
     },
     deleteRecipe: (req, res) => {
         db.UserRecipes.destroy({
