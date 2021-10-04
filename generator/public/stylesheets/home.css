@@ -45,7 +45,7 @@ main.index .recipe-cards .controls{
     justify-content: space-around;
     border: 1px #FFB344 solid;
 }
-main.index .otrasRecetas h2{
+main.index .otrasRecetas h2.question{
     margin-top: 55px;
     font-weight: lighter;
     font-size: 55px;

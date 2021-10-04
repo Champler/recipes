@@ -2,11 +2,12 @@
 <html lang="en">
     <%- include('./partials/head') %> 
     <body>
+       
         <%- include('./partials/header') %> 
     <main class="index">
         
             <div class="agregarP">
-                <h2>¿Deseas agregar una receta?</h2>
+                <h2 class="question">¿Deseas agregar una receta?</h2>
                 <% if (session.user) { %>
                     <a href="/addRecipe">click Aqui</a>
                 <% }else{ %>
@@ -47,7 +48,16 @@
                 </article>
             <% }) %>
         </section>
+
     </main>
-    
+    <footer>
+        <ul><li>Tobias Racedo</li>
+        <li>Jonathan Ruiz</li>
+        <li>Aimé Pelozo</li>
+        <li>Kevin Almada</li>
+        <li>Macarena Perez</li>
+        <li>Gonzalo Alcocer</li></ul>
+    </footer>
 </body>
+
 </html>
