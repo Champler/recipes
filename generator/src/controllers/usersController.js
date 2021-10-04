@@ -11,15 +11,14 @@ module.exports = {
         })
     },
     registerProcess: (req, res) => {
-        let {user,pass} = req.body
+        let  {user,pass}=req.body
         db.User.create({
-            name :user,
-            password : bcrypt.hashSync(pass,10)
+            name:user,
+            password: bcrypt.hashSync(pass,10)
         })
         .then(()=>{
-            res.redirect('/')
-        });
-    
+            res.redirect('/users/login')
+        })
     },
     login: (req, res) => {
         //vista
@@ -28,23 +27,25 @@ module.exports = {
         })
     },
     loginProcess: (req, res) => {
-        db.User.findOne({
-            where: {
-                name: req.body.user
-            }
-        })
-        .then (user =>{
-            if(bcrypt.compareSync(req.body.pass, user.password)){
-                req.session.user ={
-                    id:user.id,
-                    name: user.name
-                };
-                if(req.body.remember){
-                    res.cookie('RecipesCookie',req.session.user,{maxAge: 5000*60})
-                }
-                res.redirect('/')
-            }
-        })
+       db.User.findOne({
+           where: {
+               name:req.body.user
+           }
+       })
+       .then(user =>{
+           if(bcrypt.compareSync(req.body.pass,user.password)){
+               req.session.user={
+                   id: user.id,
+                   name: user.name
+               }
+               if(req.body.remember){
+                   res.cookie('RecipesCookie', req.session.user,{maxAge:5000*60})
+               }
+               res.redirect('/')
+           }else{
+               res.send('logeate de nuevo')
+           }
+       })
     },
     userLogout:(req,res)=> {
         req.session.destroy();
