@@ -64,7 +64,7 @@ header button a img {
 
 @keyframes display {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
 
   10% {
@@ -80,7 +80,7 @@ header button a img {
   }
 
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 .content {
@@ -101,8 +101,8 @@ header button a img {
 .recipeCarrousel img {
   position: absolute;
   top: 0;
-  opacity: 0;
-  animation: display 10s infinite;
+  opacity: 0.7;
+  animation: display 6s infinite;
   width: 100%;
   height: 200px;
 }
@@ -113,14 +113,6 @@ img:nth-child(2) {
 
 img:nth-child(3) {
   animation-delay: 4s;
-}
-
-img:nth-child(4) {
-  animation-delay: 6s;
-}
-
-img:nth-child(5) {
-  animation-delay: 8s;
 }
 
 /* Titulo general */

@@ -20,8 +20,8 @@
         <div class="recipeCarrousel">
             <!-- Esto debería ir dinámico, pero como no sé hacer los controllers lo hago estático --> 
             
-            <%  let x = 5 - recipe.images.length%>
-            <%  for( let i = 0; i < 5 ; i++ ) { %>
+            <%  let x = 3 - recipe.images.length%>
+            <%  for( let i = 0; i < 3 ; i++ ) { %>
                 <img src="/img/recipes_imgs/<%= recipe.images[i] ?recipe.images[i].name:recipe.images[0].name %>" alt="">
             <% } %>
             
